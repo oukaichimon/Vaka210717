@@ -6,6 +6,7 @@ using Photon.Realtime;
     
 public class KondoAroMove : MonoBehaviourPunCallbacks
 {
+    [SerializeField] private float MoveSpeed = 5f;
     // Update is called once per frame
     void Update()
     {
