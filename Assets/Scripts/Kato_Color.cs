@@ -13,16 +13,13 @@ public class Kato_Color : MonoBehaviourPunCallbacks
     // Update is called once per frame
     void Update()
     {
-        //if(photonView.IsMine)
-        //{
+        if (photonView.IsMine) { 
             if (Input.GetKeyDown(KeyCode.Space)) 
             {
-
-                photonView.RPC(nameof(ColorChange1), RpcTarget.All);
-            
+              photonView.RPC(nameof(ColorChange1), RpcTarget.All);           
             }
 
-        //}
+    }
     }
 
     [PunRPC]
@@ -30,10 +27,8 @@ public class Kato_Color : MonoBehaviourPunCallbacks
     {
         foreach(MeshRenderer mesh in colorTargets)
         {
-
             mesh.material = materials[Random.Range(0, materials.Length)];
-        }
-    
+        }    
     }
 
 }
