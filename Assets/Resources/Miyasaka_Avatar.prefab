@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8235786571422229253}
   - component: {fileID: 1650521746}
   - component: {fileID: 1650521745}
-  - component: {fileID: 1650521744}
+  - component: {fileID: 2339495619680432227}
   m_Layer: 0
   m_Name: Miyasaka_Avatar
   m_TagString: Untagged
@@ -117,7 +117,8 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 2339495619680432227}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -133,7 +134,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24444cfad26b7a44092abf7dc9396aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1650521744
+  MoveSpeed: 5
+--- !u!114 &2339495619680432227
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -142,7 +144,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6699225348531954307}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 129ba4017dacb48418aee92c02b5d231, type: 3}
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myAvatar: {fileID: 6699225348531954307}
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1

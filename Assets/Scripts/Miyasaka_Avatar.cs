@@ -5,6 +5,7 @@ using Photon.Pun;
 
 public class Miyasaka_Avatar : MonoBehaviourPunCallbacks
 {
+    [SerializeField] private float MoveSpeed = 5f;
     // Update is called once per frame
     void Update()
     {
