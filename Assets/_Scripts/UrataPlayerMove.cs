@@ -31,7 +31,7 @@ public class UrataPlayerMove : MonoBehaviourPunCallbacks
             Quaternion rot = Quaternion.AngleAxis(Time.deltaTime * rotSpeed, Vector3.up);
             transform.rotation = rot * transform.localRotation;
 
-            photonView.RPC("SetColor", RpcTarget.All, 0);
+            photonView.RPC("SetColor", RpcTarget.All);
         }
 
     }
