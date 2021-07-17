@@ -6,6 +6,7 @@ using Photon.Pun;
 public class UrataPlayerMove : MonoBehaviourPunCallbacks
 {
     [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private float rotSpeed = 100f;
 
     // Update is called once per frame
     void Update()
@@ -19,5 +20,8 @@ public class UrataPlayerMove : MonoBehaviourPunCallbacks
 
             transform.position += v3;
         }
+
+        Quaternion rot = Quaternion.AngleAxis(Time.deltaTime * rotSpeed, Vector3.up);
+        transform.rotation = rot * transform.localRotation;
     }
 }

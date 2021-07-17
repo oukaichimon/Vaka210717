@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
-using Photon.Realtime;
-    
-public class KondoAroMove : MonoBehaviourPunCallbacks
+
+public class Shibata_Avatar : MonoBehaviourPunCallbacks
 {
     // Update is called once per frame
     void Update()
