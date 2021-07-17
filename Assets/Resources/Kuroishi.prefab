@@ -343,9 +343,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color:
-  - {fileID: 2100000, guid: 9ef7d803b2251414babe8c206e41c122, type: 2}
-  - {fileID: 2100000, guid: ddae9d906799b5a47b7224f0a7d85b8e, type: 2}
-  - {fileID: 2100000, guid: f1df7304ddd5485459d9d7e506d661b0, type: 2}
+  - {fileID: 2100000, guid: 2d678531e7f044f44a1e768f9c6f894d, type: 2}
+  - {fileID: 2100000, guid: a7a83d27d57300d4f90d5dd9eaa7be72, type: 2}
+  - {fileID: 2100000, guid: 109daafb888736047ab52d9a339d3c35, type: 2}
 --- !u!1 &8465713879086167867
 GameObject:
   m_ObjectHideFlags: 0
