@@ -43,19 +43,20 @@ public class Kuroishi : MonoBehaviourPunCallbacks
 
             if (Input.GetKeyDown(KeyCode.Q))
             {
-                MateColor(0);
+                photonView.RPC(nameof(MateColor), RpcTarget.All, 0);
             }
             if (Input.GetKeyDown(KeyCode.W))
             {
-                MateColor(1);
+                photonView.RPC(nameof(MateColor), RpcTarget.All, 1);
             }
             if (Input.GetKeyDown(KeyCode.E))
             {
-                MateColor(2);
+                photonView.RPC(nameof(MateColor), RpcTarget.All, 2);
             }
         }
     }
 
+    [PunRPC]
     void MateColor(int n)
     {
         mesh.material = color[n];
