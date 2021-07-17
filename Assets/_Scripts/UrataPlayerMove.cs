@@ -42,3 +42,4 @@ public class UrataPlayerMove : MonoBehaviourPunCallbacks
         float amp = Mathf.Cos(phi) * .5f + .5f;
         meshRenderer.material.color = Color.HSVToRGB(amp, 1, 1);
     }
+}
