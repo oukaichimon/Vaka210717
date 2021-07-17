@@ -5,6 +5,7 @@ using Photon.Pun;//Unityでフォトンを使うため
 using Photon.Realtime;//Photonになぐ
 
 
+
 public class Kuroishi : MonoBehaviourPunCallbacks
 {
     float move = 5f;
@@ -27,6 +28,15 @@ public class Kuroishi : MonoBehaviourPunCallbacks
             z = Input.GetAxis("Vertical") * Time.deltaTime * move;
             pos = new Vector3(x, 0, z);
             transform.position += pos;
+
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                transform.localScale = new Vector3(2, 2, 2);
+            }
+            if (Input.GetKeyDown(KeyCode.Z))
+            {
+                transform.localScale = new Vector3(1, 1, 1);
+            }
         }
     }
 }
