@@ -34,14 +34,23 @@ public class Fukuda_AvatarMove : MonoBehaviourPunCallbacks
 
             if (Input.GetKeyDown(KeyCode.Alpha2))
             {
+<<<<<<< HEAD
                 photonView.RPC(nameof(SetColor), RpcTarget.All, 1);
+=======
+                photonView.RPC("SetColor", RpcTarget.All, 0);
+>>>>>>> 5fdd508e09c932bfa0e01c2c2b3bf57ad3ebb02d
             }
 
             if (Input.GetKeyDown(KeyCode.Alpha3))
             {
+<<<<<<< HEAD
                 photonView.RPC(nameof(SetColor), RpcTarget.All, 2);
+=======
+                photonView.RPC("SetColor", RpcTarget.All, 0);
+>>>>>>> 5fdd508e09c932bfa0e01c2c2b3bf57ad3ebb02d
             }
         }
+
     }
 
     [PunRPC]
