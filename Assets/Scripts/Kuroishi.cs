@@ -13,10 +13,13 @@ public class Kuroishi : MonoBehaviourPunCallbacks
     float x;
     float z;
 
+    public Material[] color = new Material[3];
+    private MeshRenderer mesh;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        mesh = GetComponent<MeshRenderer>();
     }
 
     // Update is called once per frame
@@ -37,6 +40,24 @@ public class Kuroishi : MonoBehaviourPunCallbacks
             {
                 transform.localScale = new Vector3(1, 1, 1);
             }
+
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                MateColor(0);
+            }
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                MateColor(1);
+            }
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                MateColor(2);
+            }
         }
+    }
+
+    void MateColor(int n)
+    {
+        mesh.material = color[n];
     }
 }
