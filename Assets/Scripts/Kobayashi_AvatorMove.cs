@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using Photon.Realtime;
 
-public class Fukuda_AvatarMove : MonoBehaviourPunCallbacks
+public class Kobayashi_AvatorMove : MonoBehaviourPunCallbacks
 {
-    // Update is called once per frame
+
+    // Start is called before the first frame update
     void Update()
     {
         if (photonView.IsMine)
@@ -15,7 +17,7 @@ public class Fukuda_AvatarMove : MonoBehaviourPunCallbacks
                 0,
                 Input.GetAxis("Vertical") * Time.deltaTime);
 
-            //à⁄ìÆÇ∑ÇÈ
+            //à⁄ìÆÇ∑ÇÈÇ±Å[Ç«
             transform.position += v;
         }
     }
