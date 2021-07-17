@@ -31,22 +31,23 @@ public class Fukuda_AvatarMove : MonoBehaviourPunCallbacks
 
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
-                SetColor(0);
+                photonView.RPC("SetColor", RpcTarget.All, 0);
             }
 
             if (Input.GetKeyDown(KeyCode.Alpha2))
             {
-                SetColor(1);
+                photonView.RPC("SetColor", RpcTarget.All, 0);
             }
 
             if (Input.GetKeyDown(KeyCode.Alpha3))
             {
-                SetColor(2);
+                photonView.RPC("SetColor", RpcTarget.All, 0);
             }
         }
 
     }
 
+    [PunRPC]
     void SetColor(int colorNum)
     {
         mesh.material = colors[colorNum];
