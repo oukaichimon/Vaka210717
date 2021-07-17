@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 3669101526449963419}
   - component: {fileID: 3669101526449963410}
   - component: {fileID: 3669101526449963412}
+  - component: {fileID: 1774356862390172550}
   m_Layer: 0
   m_Name: Kat_Avatar
   m_TagString: Untagged
@@ -32,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 3669101526449963411}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.74, y: 0.65, z: -0.555}
-  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -251,3 +252,20 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
+--- !u!114 &1774356862390172550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3669101526449963411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c728b4b2a65bf574eac6e4dd763c3e0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorTargets:
+  - {fileID: 3669101526449963415}
+  materials:
+  - {fileID: 2100000, guid: 66de96fa6cdc39a45befd62065d4dbc7, type: 2}
+  - {fileID: 2100000, guid: 1d88e662b5d3c1a478f40288ae0d1741, type: 2}
