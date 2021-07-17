@@ -55,7 +55,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -151,3 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69904e0d86361aa40b7f44feee7ac58a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colors:
+  - {fileID: 2100000, guid: 00e290eaf7583884a9b27e802e6266da, type: 2}
+  - {fileID: 2100000, guid: bfed89d84d8150d409ef9635e9326945, type: 2}
+  - {fileID: 2100000, guid: b344de9304455614c8cf388aa8529884, type: 2}
