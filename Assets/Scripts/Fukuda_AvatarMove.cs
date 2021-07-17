@@ -27,28 +27,29 @@ public class Fukuda_AvatarMove : MonoBehaviourPunCallbacks
             transform.position += v;
 
 
+            //PhotonViewに対してメッセージ発信
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
+                //nameofでメソッドの文字列を取得できる
+                //RpcTarget.Allで自分を含む全てのアバターにメッセージを投げる
                 photonView.RPC(nameof(SetColor), RpcTarget.All, 0);
             }
 
             if (Input.GetKeyDown(KeyCode.Alpha2))
             {
-
                 photonView.RPC(nameof(SetColor), RpcTarget.All, 1);
-
             }
 
             if (Input.GetKeyDown(KeyCode.Alpha3))
             {
-
                 photonView.RPC(nameof(SetColor), RpcTarget.All, 2);
-
             }
         }
 
     }
 
+    //PhotonViewからメッセージ受け取り
+    //PunRPC属性をつけないと、メッセージを受け取れない
     [PunRPC]
     void SetColor(int colorNum)
     {
