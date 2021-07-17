@@ -15,7 +15,7 @@ public class Fukuda_AvatarMove : MonoBehaviourPunCallbacks
                 0,
                 Input.GetAxis("Vertical") * Time.deltaTime);
 
-
+            //à⁄ìÆÇ∑ÇÈÇ±Å[Ç«
             transform.position += v;
         }
     }
