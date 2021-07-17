@@ -8,6 +8,13 @@ public class UrataPlayerMove : MonoBehaviourPunCallbacks
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float rotSpeed = 100f;
 
+    private MeshRenderer meshRenderer;
+    [SerializeField] float duration = 2f;
+
+    private void Start()
+    {
+        meshRenderer = GetComponent<MeshRenderer>();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -23,5 +30,15 @@ public class UrataPlayerMove : MonoBehaviourPunCallbacks
 
         Quaternion rot = Quaternion.AngleAxis(Time.deltaTime * rotSpeed, Vector3.up);
         transform.rotation = rot * transform.localRotation;
+
+        photonView.RPC(nameof(SetColor), RpcTarget.All);
+    }
+
+    [PunRPC]
+    void SetColor()
+    {
+        float phi = Time.time / duration * 2 * Mathf.PI;
+        float amp = Mathf.Cos(phi) * .5f + .5f;
+        meshRenderer.material.color = Color.HSVToRGB(amp, 1, 1);
     }
 }
