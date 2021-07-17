@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
-public class EyeColor3 : MonoBehaviourPunCallbacks
+public class Kato_Color : MonoBehaviourPunCallbacks
 {
     [SerializeField]
     private MeshRenderer[] colorTargets;
@@ -11,16 +11,16 @@ public class EyeColor3 : MonoBehaviourPunCallbacks
     private Material[] materials;
 
     // Update is called once per frame
-    public void ColorChanegePhoton()
+    void Update()
     {
         //if(photonView.IsMine)
         //{
-           // if (Input.GetKeyDown(KeyCode.Space)) 
-          //  {
+            if (Input.GetKeyDown(KeyCode.Space)) 
+            {
 
                 photonView.RPC(nameof(ColorChange1), RpcTarget.All);
             
-          //  }
+            }
 
         //}
     }
